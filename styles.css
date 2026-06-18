@@ -1,0 +1,392 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f5ef;
+  --ink: #1d2921;
+  --muted: #667067;
+  --line: #d9d7ce;
+  --panel: #fffdf7;
+  --primary: #497749;
+  --primary-dark: #315833;
+  --accent: #b6534f;
+  --gold: #d6a94b;
+  --blue: #5d7f9d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC",
+    "Microsoft YaHei", Arial, sans-serif;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+}
+
+.site-header,
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 22px 24px;
+}
+
+.site-header nav,
+.site-footer {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.site-header a,
+.site-footer a {
+  text-decoration: none;
+}
+
+.site-header a:hover,
+.site-footer a:hover {
+  color: var(--primary-dark);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.brand img {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+}
+
+.hero,
+.section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 72px 24px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  align-items: center;
+  gap: 56px;
+  min-height: calc(100vh - 88px);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--primary-dark);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 760px;
+  margin-bottom: 20px;
+  font-size: clamp(42px, 7vw, 74px);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.lead {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.button.primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.button.secondary {
+  color: var(--primary-dark);
+}
+
+.phone-preview {
+  width: min(100%, 360px);
+  margin: 0 auto;
+  padding: 16px;
+  border: 10px solid #1f2922;
+  border-radius: 34px;
+  background: #fdfbf4;
+  box-shadow: 0 24px 70px rgb(31 41 34 / 0.22);
+}
+
+.phone-top {
+  width: 78px;
+  height: 6px;
+  margin: 0 auto 18px;
+  border-radius: 999px;
+  background: #1f2922;
+}
+
+.app-screen {
+  min-height: 520px;
+  padding: 22px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #fffdf7 0%, #efe9dc 100%);
+}
+
+.screen-title {
+  margin-bottom: 18px;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.chip-row span {
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.wardrobe-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.item-card {
+  aspect-ratio: 1 / 1.25;
+  border-radius: 14px;
+  border: 1px solid rgb(29 41 33 / 0.08);
+}
+
+.item-card.green {
+  background: linear-gradient(145deg, #9cb88b, #497749);
+}
+
+.item-card.cream {
+  background: linear-gradient(145deg, #eee4cc, #c8a35b);
+}
+
+.item-card.rose {
+  background: linear-gradient(145deg, #d99b96, #b6534f);
+}
+
+.item-card.blue {
+  background: linear-gradient(145deg, #a9bbca, #5d7f9d);
+}
+
+.calendar-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.calendar-strip span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.calendar-strip .active {
+  background: var(--primary);
+  color: #fff;
+}
+
+.section-heading {
+  max-width: 620px;
+  margin-bottom: 30px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.feature {
+  min-height: 210px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.feature p,
+.split p,
+.download p,
+.policy p,
+.policy li {
+  color: var(--muted);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 40px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.download {
+  max-width: 760px;
+  text-align: center;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+}
+
+.policy {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 64px 24px 88px;
+}
+
+.policy article {
+  padding: 42px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.policy h1 {
+  font-size: clamp(34px, 5vw, 54px);
+}
+
+.policy h2 {
+  margin-top: 36px;
+  font-size: 24px;
+}
+
+.policy ul {
+  padding-left: 22px;
+}
+
+.policy hr {
+  margin: 38px 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+.updated {
+  font-weight: 700;
+}
+
+@media (max-width: 860px) {
+  .hero,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 42px;
+    gap: 36px;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header,
+  .site-footer {
+    padding: 16px;
+  }
+
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero,
+  .section,
+  .policy {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .lead {
+    font-size: 18px;
+  }
+
+  .actions,
+  .button {
+    width: 100%;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .policy article {
+    padding: 24px;
+  }
+}
