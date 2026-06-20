@@ -143,6 +143,10 @@ h3 {
   margin-top: 30px;
 }
 
+.actions.centered {
+  justify-content: center;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -162,6 +166,15 @@ h3 {
 
 .button.secondary {
   color: var(--primary-dark);
+}
+
+.download .actions {
+  justify-content: center;
+  width: 100%;
+}
+
+.download .button {
+  width: auto;
 }
 
 .hero-art {
@@ -300,6 +313,10 @@ h3 {
   .actions,
   .button {
     width: 100%;
+  }
+
+  .download .button {
+    width: auto;
   }
 
   .feature-grid {
