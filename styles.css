@@ -84,11 +84,15 @@ a {
 }
 
 .hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 380px;
-  align-items: center;
-  gap: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
   min-height: calc(100vh - 88px);
+  padding-top: 42px;
+}
+
+.hero-copy {
+  max-width: 820px;
 }
 
 .eyebrow {
@@ -160,102 +164,20 @@ h3 {
   color: var(--primary-dark);
 }
 
-.phone-preview {
-  width: min(100%, 360px);
-  margin: 0 auto;
-  padding: 16px;
-  border: 10px solid #1f2922;
-  border-radius: 34px;
-  background: #fdfbf4;
-  box-shadow: 0 24px 70px rgb(31 41 34 / 0.22);
-}
-
-.phone-top {
-  width: 78px;
-  height: 6px;
-  margin: 0 auto 18px;
-  border-radius: 999px;
-  background: #1f2922;
-}
-
-.app-screen {
-  min-height: 520px;
-  padding: 22px;
-  border-radius: 24px;
-  background: linear-gradient(180deg, #fffdf7 0%, #efe9dc 100%);
-}
-
-.screen-title {
-  margin-bottom: 18px;
-  font-size: 28px;
-  font-weight: 900;
-}
-
-.chip-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 22px;
-}
-
-.chip-row span {
-  padding: 7px 12px;
+.hero-art {
+  order: -1;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 999px;
-  background: #fff;
-  color: var(--muted);
-  font-size: 13px;
+  border-radius: 8px;
+  background: #f7f5ef;
 }
 
-.wardrobe-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.item-card {
-  aspect-ratio: 1 / 1.25;
-  border-radius: 14px;
-  border: 1px solid rgb(29 41 33 / 0.08);
-}
-
-.item-card.green {
-  background: linear-gradient(145deg, #9cb88b, #497749);
-}
-
-.item-card.cream {
-  background: linear-gradient(145deg, #eee4cc, #c8a35b);
-}
-
-.item-card.rose {
-  background: linear-gradient(145deg, #d99b96, #b6534f);
-}
-
-.item-card.blue {
-  background: linear-gradient(145deg, #a9bbca, #5d7f9d);
-}
-
-.calendar-strip {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 8px;
-  margin-top: 24px;
-}
-
-.calendar-strip span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 1;
-  border-radius: 12px;
-  background: #fff;
-  color: var(--muted);
-  font-weight: 800;
-}
-
-.calendar-strip .active {
-  background: var(--primary);
-  color: #fff;
+.hero-art img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .section-heading {
@@ -339,14 +261,12 @@ h3 {
 }
 
 @media (max-width: 860px) {
-  .hero,
   .split {
     grid-template-columns: 1fr;
   }
 
   .hero {
-    padding-top: 42px;
-    gap: 36px;
+    gap: 32px;
   }
 
   .feature-grid {
